@@ -32,7 +32,7 @@ about:
   home: https://github.com/eukaryote/pytest-tornasync
   license: MIT
   license_family: MIT
-  license_file: {{ RECIPE_DIR }}/LICENSE
+  license_file: LICENSE
   summary: py.test plugin for testing Python 3.5+ Tornado code
   dev_url: https://github.com/eukaryote/pytest-tornasync
 
