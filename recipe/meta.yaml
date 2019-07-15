@@ -1,5 +1,5 @@
 {% set name = "pytest-tornasync" %}
-{% set version = "0.6.0.post1" %}
+{% set version = "0.6.0.post2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5fe41d6d98d4650898c082a69338d25879cadd0e55805c9a02bc3eb7212a2ea1
+  sha256: d781b6d951a2e7c08843141d3ff583610b4ea86bfa847714c76edefb576bbe5d
 
 build:
   noarch: python
