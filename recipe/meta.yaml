@@ -6,25 +6,27 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d781b6d951a2e7c08843141d3ff583610b4ea86bfa847714c76edefb576bbe5d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools
   run:
     - pytest >=3.0
-    - python >=3.5
+    - python >={{ python_min }}
     - tornado >=5.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pytest_tornasync
 
